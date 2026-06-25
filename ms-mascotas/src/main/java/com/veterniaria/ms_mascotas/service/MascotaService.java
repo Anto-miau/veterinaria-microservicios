@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.veterniaria.ms_mascotas.DTO.MascotaDTO;
 import com.veterniaria.ms_mascotas.model.Mascota;
 import com.veterniaria.ms_mascotas.repository.MascotaRepository;
 
+@Service
 public class MascotaService {
     
     @Autowired

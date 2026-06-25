@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.veterniaria.ms_mascotas.DTO.ContactoDTO;
 import com.veterniaria.ms_mascotas.model.Contacto;
 import com.veterniaria.ms_mascotas.repository.ContactoRepository;
 
+@Service
 public class ContactoService {
     
     @Autowired

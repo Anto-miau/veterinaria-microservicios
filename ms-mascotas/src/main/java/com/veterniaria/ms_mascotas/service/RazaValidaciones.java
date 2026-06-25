@@ -1,8 +1,11 @@
 package com.veterniaria.ms_mascotas.service;
 
+import org.springframework.stereotype.Service;
+
 import com.veterniaria.ms_mascotas.DTO.RazaDTO;
 import com.veterniaria.ms_mascotas.model.Raza;
 
+@Service
 public class RazaValidaciones {
     
     public Boolean validarNullVacio(Raza raza) {
