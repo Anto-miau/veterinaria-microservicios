@@ -23,10 +23,12 @@ import com.veterniaria.ms_mascotas.assemblers.MascotaModelAssembler;
 import com.veterniaria.ms_mascotas.model.Mascota;
 import com.veterniaria.ms_mascotas.service.MascotaService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController("mascotaControllerV2")
 @RequestMapping("/api/v2/mascotas")
+@Tag(name = "Mascotas v2", description = "CRUD basico de mascotas (HATEOAS)")
 public class MascotaController {
 
     @Autowired

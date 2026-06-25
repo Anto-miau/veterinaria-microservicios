@@ -17,10 +17,12 @@ import com.veterniaria.ms_mascotas.DTO.ContactosDTO;
 import com.veterniaria.ms_mascotas.model.Contactos;
 import com.veterniaria.ms_mascotas.service.ContactosService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/contactos-mascota")
+@Tag(name = "Contactos v1", description = "CRUD basico de contactos (sin HATEOAS)")
 public class ContactosController {
     
     @Autowired

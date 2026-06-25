@@ -20,6 +20,8 @@ import com.veterniaria.ms_mascotas.assemblers.RazaModelAssembler;
 import com.veterniaria.ms_mascotas.model.Raza;
 import com.veterniaria.ms_mascotas.service.RazaService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
@@ -27,6 +29,7 @@ import jakarta.validation.Valid;
 
 @RestController("razaControllerV2")
 @RequestMapping("/api/v2/razas")
+@Tag(name = "Raza v2", description = "CRUD basico de raza (HATEOAS)")
 public class RazaController {
 
     @Autowired

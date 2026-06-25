@@ -17,10 +17,12 @@ import com.veterniaria.ms_mascotas.DTO.EnfermedadesDTO;
 import com.veterniaria.ms_mascotas.model.Enfermedades;
 import com.veterniaria.ms_mascotas.service.EnfermedadesService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/enfermedades-mascota")
+@Tag(name = "Enfermedades v1", description = "CRUD basico de enfermedades (sin HATEOAS)")
 public class EnfermedadesController {
 
     @Autowired

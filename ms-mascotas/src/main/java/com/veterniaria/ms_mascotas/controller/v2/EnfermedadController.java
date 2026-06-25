@@ -23,10 +23,12 @@ import com.veterniaria.ms_mascotas.assemblers.EnfermedadModelAssembler;
 import com.veterniaria.ms_mascotas.model.Enfermedad;
 import com.veterniaria.ms_mascotas.service.EnfermedadService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController("enfermedadControllerV2")
 @RequestMapping("/api/v2/enfermedades")
+@Tag(name = "Enfermedad v2", description = "CRUD basico de enfermedad (HATEOAS)")
 public class EnfermedadController {
 
     @Autowired

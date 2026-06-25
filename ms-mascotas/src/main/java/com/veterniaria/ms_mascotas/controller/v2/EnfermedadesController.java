@@ -20,6 +20,8 @@ import com.veterniaria.ms_mascotas.assemblers.EnfermedadesModelAssembler;
 import com.veterniaria.ms_mascotas.model.Enfermedades;
 import com.veterniaria.ms_mascotas.service.EnfermedadesService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
@@ -27,6 +29,7 @@ import jakarta.validation.Valid;
 
 @RestController("enfermedadesControllerV2")
 @RequestMapping("/api/v2/enfermedades-mascota")
+@Tag(name = "Enfermedades v2", description = "CRUD basico de enfermedades (HATEOAS)")
 public class EnfermedadesController {
     @Autowired
     private EnfermedadesService enfermedadesService;

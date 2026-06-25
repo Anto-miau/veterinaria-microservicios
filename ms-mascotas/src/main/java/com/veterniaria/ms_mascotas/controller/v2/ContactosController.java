@@ -20,6 +20,8 @@ import com.veterniaria.ms_mascotas.assemblers.ContactosModelAssembler;
 import com.veterniaria.ms_mascotas.model.Contactos;
 import com.veterniaria.ms_mascotas.service.ContactosService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
@@ -27,6 +29,7 @@ import jakarta.validation.Valid;
 
 @RestController("contactosControllerV2")
 @RequestMapping("/api/v2/contactos-mascota")
+@Tag(name = "Contactos v2", description = "CRUD basico de contactos (HATEOAS)")
 public class ContactosController {
 
     @Autowired

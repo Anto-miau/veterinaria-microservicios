@@ -18,10 +18,12 @@ import com.veterniaria.ms_mascotas.DTO.EspecieDTO;
 import com.veterniaria.ms_mascotas.model.Especie;
 import com.veterniaria.ms_mascotas.service.EspecieService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/especies")
+@Tag(name = "Especie v1", description = "CRUD básico de especie (sin HATEOAS)")
 public class EspecieController {
 
     @Autowired
