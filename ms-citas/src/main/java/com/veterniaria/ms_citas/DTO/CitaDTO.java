@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CitaDTO {
 
+    private MascotaExternoDTO mascota;
     private Integer id;
     private String motivo;
     private LocalDateTime fechaHora;
