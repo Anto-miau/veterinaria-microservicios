@@ -2,7 +2,7 @@
 
 Proyecto **Sumativa 3** — Desarrollo FullStack 1 — DuocUC
 
-## 📋 Descripción del proyecto
+## Descripción del proyecto
 
 Sistema de gestión para una clínica veterinaria, desarrollado bajo una **arquitectura de microservicios** con Spring Boot. El dominio cubre el registro de mascotas, sus dueños, citas veterinarias, tratamientos, insumos y métodos de pago, además de la ubicación geográfica (región/comuna) asociada a cada dueño.
 
@@ -11,47 +11,24 @@ El proyecto migra desde un monolito (Unidad 1 y 2) hacia una arquitectura distri
 
 
 `eureka-server`
-|
  8761 
-|
  Servidor de descubrimiento de servicios (Service Discovery) 
-|
-|
 `api-gateway`
-|
  8080 
-|
  Punto de entrada único, enruta las peticiones a cada microservicio 
-|
-|
 `ms-ubicacion`
-|
  8081 
-|
  Gestión de Región y Comuna 
-|
-|
 `ms-personas`
-|
  8082 
-|
  Gestión de Dueño, Veterinario y Especialidad 
-|
-|
 `ms-mascotas`
-|
  0 (asignado dinámicamente vía Eureka) 
-|
  Gestión de Mascota, Especie, Raza, Enfermedad y Contacto 
-|
-|
 `ms-citas`
-|
  0 (asignado dinámicamente vía Eureka) 
-|
  Gestión de Cita, Tratamiento, Insumo y Método de Pago 
-|
-
+ 
 Cada microservicio implementa:
 - Arquitectura en capas: `model` → `repository` → `service` (+ `validaciones`) → `controller`
 - **Dos versiones de API**: `v1` (CRUD REST básico) y `v2` (con HATEOAS)
@@ -61,7 +38,7 @@ Cada microservicio implementa:
 
 ## 🔗 Comunicación entre microservicios
 
-`ms-citas` consulta a `ms-mascotas` vía **WebClient** (con balanceo de carga a través de Eureka) para enriquecer la información de cada cita con los datos de la mascota asociada.
+`ms-citas` consulta a `ms-mascotas` vía **WebClient** (con balanceo de carga a través de Eureka)
 
 ## 🌐 Rutas principales del API Gateway
 
@@ -91,61 +68,31 @@ Todas las peticiones pasan por `http://localhost:8080`:
 ```
 
 ## 📖 Documentación Swagger
-
-|
- Recurso 
-|
- URL 
-|
-|
----
-|
----
-|
-|
-**
 Swagger unificado
-**
  (a través del Gateway) 
-|
  http://localhost:8080/swagger-ui/index.html 
-|
-|
  Swagger 
 `ms-mascotas`
  (individual) 
-|
  http://localhost:8083/doc/swagger-ui/index.html 
-*
 (puerto real puede variar, ver consola al iniciar)
-*
-|
-|
  Swagger 
 `ms-citas`
  (individual) 
-|
  http://localhost:8084/doc/swagger-ui/index.html 
-*
 (puerto real puede variar, ver consola al iniciar)
-*
-|
-|
  Dashboard de Eureka 
-|
  http://localhost:8761 
-|
 
-## ⚙️ Requisitos previos
+## ⚙️ Requisitos previos obvio
 
 - Java 21
 - Maven (o usar el wrapper `mvnw` incluido)
 - MySQL 8+ corriendo en `localhost:3306`, usuario `root`, sin contraseña (ej. vía [Laragon](https://laragon.org/))
 
-## 🚀 Instrucciones de ejecución local
+## Instrucciones de ejecución local
 
 ### Opción 1 — Manual (orden importante)
-
 Cada microservicio debe levantarse en **una terminal distinta**, siguiendo este orden:
 
 ```bash
@@ -168,15 +115,11 @@ cd api-gateway
 
 Las bases de datos se crean automáticamente (`createDatabaseIfNotExist=true`) y las tablas se generan vía Flyway al iniciar cada servicio.
 
-### Opción 2 — Script automático
+### Opción 2 — Script automático (recomendado porque pa algo lo hice)
 
 ```bash
 # Windows
 iniciar-todo.bat
-
-# Linux / Mac
-./iniciar-todo.sh
-```
 
 ### Verificación
 
@@ -196,7 +139,7 @@ cd ms-citas
 ./mvnw test
 ```
 
-## 🛠️ Stack tecnológico
+## tecnologias
 
 - Spring Boot 4.0.6 / Java 21
 - Spring Data JPA + MySQL
@@ -205,5 +148,7 @@ cd ms-citas
 - Springdoc OpenAPI (Swagger)
 - Spring Cloud Gateway + Eureka (Netflix)
 - WebClient (comunicación entre microservicios)
+
+eso miau
 - JUnit 5 + Mockito + DataFaker
 - Lombok
