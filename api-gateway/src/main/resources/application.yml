@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: mascotas-service 
+              uri: lb://ms-mascotas
+              predicates:
+                - Path=/api/v1/mascotas/**, /api/v2/mascotas/**, /api/v1/especies/**, /api/v2/especies/**, /api/v1/razas/**, /api/v2/razas/**, /api/v1/enfermedades/**, /api/v2/enfermedades/**, /api/v1/contactos/**, /api/v2/contactos/**, /api/v1/contactos-mascota/**, /api/v2/contactos-mascota/**, /api/v1/enfermedades-mascota/**, /api/v2/enfermedades-mascota/**, /mascotas/api-docs/**
+            - id: citas-service
+              uri: lb://ms-citas
+              predicates:
+                - Path=/api/v1/citas/**, /api/v2/citas/**, /api/v1/tratamientos/**, /api/v2/tratamientos/**, /api/v1/insumos/**, /api/v2/insumos/**, /api/v1/pagos/**, /api/v2/pagos/**, /api/v1/tratamientos-cita/**, /api/v2/tratamientos-cita/**, /api/v1/insumos-tratamiento/**, /api/v2/insumos-tratamiento/**, /api/v1/pagos-cita/**, /api/v2/pagos-cita/**, /api/v1/veterinarios-cita/**, /api/v2/veterinarios-cita/**, /citas/api-docs/**
+springdoc:
+  swagger-ui:
+    path: /swagger-ui/index.html
+    urls:
+      - name: Microservicio Mascotas
+        url: /mascotas/api-docs
+      - name: Microservicio Citas
+        url: /citas/api-docs
+  api-docs:
+    enabled: true

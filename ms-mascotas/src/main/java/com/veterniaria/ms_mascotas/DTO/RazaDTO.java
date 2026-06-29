@@ -1,0 +1,16 @@
+package com.veterniaria.ms_mascotas.DTO;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class RazaDTO {
+
+    private Integer id;
+    private String nombre;
+    private Integer especieId;
+    private String especieNombre;
+}
