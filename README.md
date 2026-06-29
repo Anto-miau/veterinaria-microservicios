@@ -8,42 +8,6 @@ Sistema de gestión para una clínica veterinaria, desarrollado bajo una **arqui
 
 El proyecto migra desde un monolito (Unidad 1 y 2) hacia una arquitectura distribuida (Unidad 3), incorporando descubrimiento de servicios (Eureka), un API Gateway centralizado, documentación interactiva con Swagger/OpenAPI, comunicación entre microservicios vía WebClient, y pruebas unitarias con JUnit + Mockito + DataFaker.
 
-## 👥 Integrantes
-
-|
- Estudiante 
-|
- Microservicio(s) a cargo 
-|
-|
----
-|
----
-|
-|
- Anto 
-|
-`ms-mascotas`
-, 
-`ms-citas`
-, 
-`api-gateway`
-, 
-`eureka-server`
-, pruebas unitarias 
-|
-|
- Mati 
-|
-`ms-ubicacion`
-|
-|
- Cris 
-|
-`ms-personas`
-|
-
-> ⚠️ **Nota:** El trabajo de `ms-ubicacion` y `ms-personas`, junto con un avance independiente de Gateway/Eureka realizado por Cris, se encuentra en la rama `cris-trabajo` (en revisión/corrección). La rama `miau` contiene la versión estable y completamente funcional del proyecto (Eureka + Gateway + `ms-mascotas` + `ms-citas`), usada para evitar que errores de compilación en curso afectaran la entrega del resto del equipo.
 
 ## 🧩 Microservicios implementados
 
