@@ -8,7 +8,10 @@ Sistema de gestión para una clínica veterinaria, desarrollado bajo una **arqui
 
 El proyecto migra desde un monolito (Unidad 1 y 2) hacia una arquitectura distribuida (Unidad 3), incorporando descubrimiento de servicios (Eureka), un API Gateway centralizado, documentación interactiva con Swagger/OpenAPI, comunicación entre microservicios vía WebClient, y pruebas unitarias con JUnit + Mockito + DataFaker.
 
-
+## TRABAJO POR ESTUDIANTE
+anto miau hizo ms-citas | ms-mascotas | eureka | api-gateway | pruebas unitarias | hateoas y todo eso
+mati no hizo na pero se supone haría ms-ubicacion (el mas simple)
+cris hizo ms-personas | api-gateway | eureka | 
 
 `eureka-server`
  8761 
